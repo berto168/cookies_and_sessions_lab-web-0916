@@ -1,0 +1,11 @@
+<h1>Homepage</h1>
+
+<%= form_tag product_path do %>
+<%= label_tag "Product Name:" %>
+<%= text_field_tag :product %>
+<%= submit_tag "add to cart" %>
+<% end  %>
+
+<% session[:cart].each do |product| %>
+  <%= product.name %>
+<% end  %>
